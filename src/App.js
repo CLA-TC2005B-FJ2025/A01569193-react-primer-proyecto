@@ -1,17 +1,34 @@
+// import CSS
+import 'bulma/css/bulma.css'
+
 import React from 'react'
 import { Tarjeta } from './Tarjeta'
-// importamos las imagenes 
-import MarioImage from'./Imagenes/Mario.png'
-import PeachImage from'./Imagenes/Peaches.png'
-import LuigiImage from'./Imagenes/Luigi.png'
+
+// Importamos las imagenes
+import MarioImage from './Imagenes/Mario.png'
+import LuigiImage from './Imagenes/Luigi.png'
+import PeachesImage from './Imagenes/Peaches.png'
 
 export function App() {
   return (
     <div>
-        <div>Personajes de Mario Bros que mas me gistas</div>
-        <Tarjeta nombre= "Mario" colorfavorito= "rojo" image = {MarioImage}/>
-        <Tarjeta nombre= "Luigi" colorfavorito= "Verde" image = {PeachImage}/>
-        <Tarjeta nombre= "Peach" colorfavorito= "Rosa" image = {LuigiImage}/>
+        <div>Personajes de Mario Bros</div>
+        <div className="container">
+          <section className="section">
+            <div className="columns">
+              <div className="column is-2">
+                <Tarjeta nombre="Mario" colorFavorito="Rojo" image={MarioImage}/>
+              </div>
+              <div className="column is-2">
+                <Tarjeta nombre="Luigi" colorFavorito="Verde" image={LuigiImage}/>
+              </div>
+              <div className="column is-2">
+                <Tarjeta nombre="Peaches" colorFavorito="Rosa" image={PeachesImage}/>
+              </div>
+            </div>
+          </section>
+        </div>
     </div>
+  
   )
 }
